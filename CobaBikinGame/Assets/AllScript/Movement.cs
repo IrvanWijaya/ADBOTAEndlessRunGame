@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour {
 	public float moventSpeed;
 	public float jump;
 	private bool grounded;
+	private float jarakTempuh = 20;
 
 	public LayerMask theGround;
 	private Collider2D myCollider;
@@ -28,6 +29,11 @@ public class Movement : MonoBehaviour {
 			if (grounded) {
 				myRigidBody.velocity = new Vector2 (myRigidBody.velocity.x, jump);
 			}
+		}
+			
+		if(transform.position.x > jarakTempuh && this.moventSpeed < 50){
+			this.moventSpeed++;
+			this.jarakTempuh += 20;
 		}
 
 		myAnimator.SetFloat ("moventSpeed", myRigidBody.velocity.x);
