@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AllScript\CameraController.cs" />
+     <Compile Include="Assets\AllScript\MainMenu.cs" />
      <Compile Include="Assets\AllScript\Movement.cs" />
      <Compile Include="Assets\AllScript\PlatformDestroyer.cs" />
      <Compile Include="Assets\AllScript\PlatformGenerator.cs" />
